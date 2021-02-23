@@ -52,6 +52,7 @@ header{
 }   
 
 .big-logo{
+    transition: all 2s;
     margin-top: 209px
 }
 .big-logo h1{
@@ -105,15 +106,43 @@ header{
     margin-top: 33px;
     color: #8f8f8f;
 }
-
+.topnav a{
+    border-bottom: 3px solid black;
+}   
+.topnav span{
+    border-bottom: 3px solid black;
+}
 @media screen and (max-width: 1010px){
-    .topnav a{
-        display: none;
+    .topnav .nav a{
+        padding-bottom: 7px;
+        margin-bottom: 3px;
+        display: inline-block;
+        width:100%;
     }
-    .topnav .icon{
+    .nav{
+        position: absolute;
+        top:100px;
+        left:0;
+        display:none;
+        
+        transition: all 2s;
+    }
+    .topnav{
+        display:flex;
+        justify-content: space-around;
+    }
+    .topnav span{
+        height: 24px;
         font-size: 24px;
         display: block;
+        color:white;
+        cursor: pointer;
         margin-top: -9px;
+        padding-bottom: 15px;
+  
+    }
+    .topnav span:hover{
+        border-bottom: 3px solid #fcac16;
     }
 }
 /* OUR TEAM */
@@ -235,9 +264,7 @@ header{
 .our_clients .cl{
     font-weight: bold;
 }
-.clients img{
-    
-}
+
 .client{
     margin-bottom: 30px;
     flex: 0 1 20%;
